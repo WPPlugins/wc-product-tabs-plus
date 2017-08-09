@@ -1,0 +1,47 @@
+<script type="text/template" id="wptp-block-template">
+    <div class="wptp-block-inner">
+        <input type="hidden" value="<%= fieldID %>" name="<%= orderID %>">
+        <div class="wptp-header">
+            <div class="wptp-title">
+                <p class="form-field">
+                    <label for="<%= titleID %>">Title *</label>
+                    <input type="text" name="<%= titleID %>" id="<%= titleID %>">
+
+                    <span class="wptp-actions">
+                        <span class="dashicons dashicons-menu wptp-sort-block" title="Move"></span>
+                        <span class="dashicons dashicons-trash wptp-delete-block" title="Remove"></span>
+                    </span>
+                </p>
+            </div>
+
+            <div class="wptp-hide">
+                <p class="form-field">
+                    <label for="<%= hideID %>">Hide</label>
+                    <input type="checkbox" class="checkbox" name="<%= hideID %>" id="<%= hideID %>" value="yes">
+                    <span class="woocommerce-help-tip" data-tip="Hide this tab on this product"></span>
+                </p>
+            </div>
+        </div>
+
+        <div class="wptp-content">
+            <div id="wp-<%= contentID %>-wrap" class="acf-editor-wrap wp-core-ui wp-editor-wrap tmce-active">
+                <div id="wp-<%= contentID %>-editor-tools" class="wp-editor-tools hide-if-no-js">
+                    <div id="wp-<%= contentID %>-media-buttons" class="wp-media-buttons">
+                        <button type="button" class="button insert-media add_media" data-editor="<%= contentID %>">
+                            <span class="wp-media-buttons-icon"></span> Add Media</button>
+                    </div>
+                    <div class="wp-editor-tabs">
+                        <button id="<%= contentID %>-tmce" class="wp-switch-editor switch-tmce"
+                                data-wp-editor-id="<%= contentID %>" type="button">Visual</button>
+                        <button id="<%= contentID %>-html" class="wp-switch-editor switch-html"
+                                data-wp-editor-id="<%= contentID %>" type="button">Text</button>
+                    </div>
+                </div>
+                <div id="wp-<%= contentID %>-editor-container" class="wp-editor-container">
+                    <textarea class="wp-editor-area" autocomplete="off" cols="40" rows="20"
+                              name="<%= contentName %>" id="<%= contentID %>"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
